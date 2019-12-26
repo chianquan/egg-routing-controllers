@@ -7,13 +7,19 @@ Mount [routing-controllers](https://github.com/typestack/routing-controllers) pa
 
 ```bash
 $ npm i @pagodas/egg-routing-controllers --save
-$ npm i routing-controllers@0.8.0 class-transformer^0.2.3 class-validator@0.10.1 --save
 ```
 
-For extensible,we also need install `egg` , `routing-controllers@0.8.0` , `class-transformer^0.2.3` , `class-validator@0.10.1` .
 
-`routing-controllers@0.8.0` and `egg` is our base peerDependencies.
+For extensible,we also need install `routing-controllers@0.8.0` , `class-transformer@^0.2.3` , `class-validator@0.10.1` .
+
+`routing-controllers@0.8.0` is our base peerDependencies.
 `class-transformer^0.2.3` , `class-validator@0.10.1` is `routing-controllers@0.8.0`'s base peerDependencies.
+
+
+```bash
+$ npm i routing-controllers@0.8.0 class-transformer@^0.2.3 class-validator@0.10.1 --save
+```
+
 
 ## Usage
 

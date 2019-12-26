@@ -25,5 +25,23 @@
   "scripts": {
     "lint": "tslint --project . -c tslint.json",
     "tsc": "tsc -p tsconfig.json"
-  }
+  },
+  "version": "0.0.1",
+  "description": "Mount [routing-controllers](https://github.com/typestack/routing-controllers) package as an egg middleware.",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chianquan/egg-routing-controllers.git"
+  },
+  "keywords": [
+    "egg",
+    "pagodas",
+    "routing-controllers"
+  ],
+  "author": "chianquan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chianquan/egg-routing-controllers/issues"
+  },
+  "homepage": "https://github.com/chianquan/egg-routing-controllers#readme"
 }
