@@ -26,9 +26,8 @@
     "lint": "tslint --project . -c tslint.json",
     "tsc": "tsc -p tsconfig.json"
   },
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Mount [routing-controllers](https://github.com/typestack/routing-controllers) package as an egg middleware.",
-  "main": "app.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chianquan/egg-routing-controllers.git"
