@@ -38,6 +38,27 @@ Support all configurations in [routing-controllers](https://github.com/typestack
   };
 ```
 
+We can add controller files to routingControllers.options.controllers?:Array.
+
+Also if leave routingControllers.options.controllers=undefined ,it will auto inject `app/routing-controller/` as the default controller directory.
+
+## controller example
+
+```js
+// file app/routing-controller/util.ts
+
+import {Ctx, Get, JsonController} from 'routing-controllers';
+@JsonController()
+export class UtilController {
+@Get('/api/search')
+  async search(@Ctx()ctx: Context) {
+    return {};
+  }
+}
+```
+
+Just export your controller(created using `routing-controllers`).
+
 ## Questions & Suggestions
 
 Please open an issue [here](https://github.com/chianquan/egg-routing-controllers/issues).
