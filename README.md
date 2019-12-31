@@ -41,13 +41,13 @@ Support all configurations in [routing-controllers](https://github.com/typestack
   config.routingControllers = {
     options: {},// config for routing-controllers create.
     disableResponseTransform: true, // hack routing-controllers to disable transform response,default false.(It's useful for mongoose response otherwise ObjectId may cause error)
+    mountPath:'./app/routing-controller' // controller path.If relative then base app.baseDir.default value ./app/routing-controller.If options have controllers then ignore this config.
   };
 ```
 
-We can add controller files to routingControllers.options.controllers?:Array.
-
-Also if leave routingControllers.options.controllers=undefined ,it will auto inject `app/routing-controller/` as the default controller directory.
-
+warming: Don't set options.controllers for routing-controllers unless you know what it is.
+egg run .ts files when debug and run .js files in production.
+Files in mouthPath will priority use the .js file ,the same name .ts file will ignored.
 ## controller example
 
 ```js
