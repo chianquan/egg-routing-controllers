@@ -1,11 +1,14 @@
-import {Application} from 'egg';
-import {BaseDriver} from 'routing-controllers/driver/BaseDriver';
+import { Application } from "egg";
+import { BaseDriver } from "routing-controllers/cjs/driver/BaseDriver";
 
 module.exports = (app: Application) => {
-  const {config} = app;
+  const { config } = app;
   // hack disable routingControllers transformResult.It's unfriendly to mongoose.
-  if (config.routingControllers && config.routingControllers.disableResponseTransform) {
+  if (
+    config.routingControllers &&
+    config.routingControllers.disableResponseTransform
+  ) {
     (BaseDriver.prototype as any).transformResult = (result) => result;
   }
-  config.appMiddleware.push('routingControllers');
+  config.appMiddleware.push("routingControllers");
 };
